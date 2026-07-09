@@ -1179,6 +1179,27 @@ class Session:
             except (TypeError, ValueError):
                 parsed_message_count = None
         self._metadata_message_count = parsed_message_count if parsed_message_count is not None and parsed_message_count >= 0 else None
+        # perf(webui): pre-computed user_message_count from the sidecar metadata prefix.
+        # Set by Session.save() (which walks messages) and by load_metadata_only
+        # (which reads it from the prefix). When None, compact() falls back to
+        # the O(N) walk via _compute_user_message_count(self.messages).
+        raw_user_message_count = kwargs.get('user_message_count')
+        parsed_user_message_count = None
+        if raw_user_message_count is not None:
+            try:
+                parsed_user_message_count = int(raw_user_message_count)
+            except (TypeError, ValueError):
+                parsed_user_message_count = None
+        # Hold the value in BOTH the public attribute (for the METADATA_FIELDS
+        # dict comprehension in save()) and the private cache (for compact()).
+        # The two must stay in sync; both are set to the same value here, and
+        # save() updates both to the recomputed count before writing.
+        if parsed_user_message_count is not None and parsed_user_message_count >= 0:
+            self.user_message_count = parsed_user_message_count
+            self._user_message_count_cached = parsed_user_message_count
+        else:
+            self.user_message_count = None
+            self._user_message_count_cached = None
 
     @property
     def path(self):
@@ -1231,7 +1252,17 @@ class Session:
             'worktree_path', 'worktree_branch', 'worktree_repo_root', 'worktree_created_at',
             'is_cli_session', 'source_tag', 'raw_source', 'session_source', 'source_label', 'read_only',
             'enabled_toolsets', 'composer_draft', 'anchor_activity_scenes',
+            'user_message_count',
         ]
+        # perf(webui): compute user_message_count once at save time (writes are
+        # rare; reads happen on every chat-open). The walk is O(N) over messages,
+        # but it's the only place we ever do it. compact() and load_metadata_only
+        # read the cached value from the sidecar metadata prefix.
+        self._user_message_count_cached = Session._compute_user_message_count(self.messages)
+        # Set the public attribute too so the METADATA_FIELDS dict comprehension
+        # below picks it up. The two stay in sync via this save path and via
+        # __init__ kwargs handling.
+        self.user_message_count = self._user_message_count_cached
         meta = {k: getattr(self, k, None) for k in METADATA_FIELDS}
         meta['message_count'] = len(self.messages or [])
         meta['messages'] = self.messages
@@ -1525,7 +1556,9 @@ class Session:
                 'worktree_repo_root': self.worktree_repo_root,
                 'worktree_created_at': self.worktree_created_at,
             } if self.worktree_path else {}),
-            'user_message_count': Session._compute_user_message_count(self.messages),
+            'user_message_count': (self._user_message_count_cached
+                                 if self._user_message_count_cached is not None
+                                 else Session._compute_user_message_count(self.messages)),
             'active_stream_id': self.active_stream_id,
             'pending_user_message': self.pending_user_message,
             'has_pending_user_message': has_pending_user_message,
