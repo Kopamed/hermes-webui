@@ -5094,6 +5094,8 @@ const LOCALES = {
     wiki_search_placeholder: 'Search pages...',
     wiki_no_pages: 'No wiki pages found',
     wiki_not_configured: 'Wiki not configured',
+    session_mark_read: '既読としてマーク',
+    session_mark_read_desc: 'チャットを開かずに既読にする',
   },
 
   ru: {
@@ -6728,6 +6730,8 @@ const LOCALES = {
     wiki_search_placeholder: 'Search pages...',
     wiki_no_pages: 'No wiki pages found',
     wiki_not_configured: 'Wiki not configured',
+    session_mark_read: 'Отметить как прочитанное',
+    session_mark_read_desc: 'Отметить чат как прочитанный без открытия',
   },
 
   es: {
@@ -8356,6 +8360,8 @@ const LOCALES = {
     wiki_search_placeholder: 'Search pages...',
     wiki_no_pages: 'No wiki pages found',
     wiki_not_configured: 'Wiki not configured',
+    session_mark_read: 'Marcar como leído',
+    session_mark_read_desc: 'Marcar conversación como leída sin abrir',
   },
 
   de: {
@@ -11613,6 +11619,8 @@ const LOCALES = {
     wiki_search_placeholder: '搜索页面...',
     wiki_no_pages: '未找到维基页面',
     wiki_not_configured: '维基未配置',
+    session_mark_read: '标记为已读',
+    session_mark_read_desc: '将聊天标记为已读，无需打开',
   },
 
   // Traditional Chinese (zh-Hant)
@@ -13308,6 +13316,8 @@ const LOCALES = {
     wiki_search_placeholder: 'Search pages...',
     wiki_no_pages: 'No wiki pages found',
     wiki_not_configured: 'Wiki not configured',
+    session_mark_read: '標記為已讀',
+    session_mark_read_desc: '將聊天標記為已讀，無需打開',
 
   },
 
@@ -16503,6 +16513,8 @@ const LOCALES = {
     wiki_search_placeholder: 'Search pages...',
     wiki_no_pages: 'No wiki pages found',
     wiki_not_configured: 'Wiki not configured',
+    session_mark_read: '읽음으로 표시',
+    session_mark_read_desc: '채팅을 열지 않고 읽음 상태로 표시',
   },
 
   fr: {
@@ -19820,6 +19832,8 @@ const LOCALES = {
     tool_action_label: _i18nToolActionLabelCs,
     tool_worklog_summary: _i18nToolWorklogSummaryCs,
     tool_summary_join: _i18nToolSummaryJoinCs,
+    session_mark_read: 'Označit jako přečtené',
+    session_mark_read_desc: 'Označit konverzaci jako přečtenou bez otevření',
   },
   tr: {
 
@@ -21504,6 +21518,8 @@ const LOCALES = {
     wiki_search_placeholder: 'Search pages...',
     wiki_no_pages: 'No wiki pages found',
     wiki_not_configured: 'Wiki not configured',
+    session_mark_read: 'Okundu olarak işaretle',
+    session_mark_read_desc: 'Sohbeti açmadan okundu olarak işaretle',
   
   
   
@@ -23194,6 +23210,8 @@ const LOCALES = {
     checkpoint_diff_title: 'Zmiany w punkcie kontrolnym',
     checkpoint_diff_no_changes: 'Nie znaleziono różnic między tym punktem kontrolnym a obecnym obszarem roboczym.',
     checkpoint_diff_files_changed: (n) => n === 1 ? '1 plik zmieniony' : `${n} zmienionych plików`,
+    session_mark_read: 'Oznacz jako przeczytane',
+    session_mark_read_desc: 'Oznacz rozmowę jako przeczytaną bez otwierania',
   },
   vi: {
     offline_title: 'Mất kết nối',
@@ -24882,6 +24900,8 @@ const LOCALES = {
     yolo_disabled: 'Chế độ YOLO TẮT',
     yolo_pill_label: 'YOLO',
     yolo_pill_title_active: 'Chế độ YOLO đang bật — bấm để tắt',
+    session_mark_read: 'Đánh dấu đã đọc',
+    session_mark_read_desc: 'Đánh dấu hội thoại đã đọc mà không cần mở',
 },
 
 };
