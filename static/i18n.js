@@ -1142,6 +1142,8 @@ const LOCALES = {
     // Composer voice-mode pref (#1488)
     settings_label_voice_mode: 'Hands-free voice mode button',
     settings_desc_voice_mode: 'Show the voice-mode button (audio waveform) next to the dictation mic. Lets you speak naturally — Hermes auto-sends after a pause and reads replies aloud. Requires a browser that supports both speech recognition and TTS.',
+    settings_label_voice_mode_server_stt: 'Use server STT for voice mode',
+    settings_desc_voice_mode_server_stt: 'Transcribe via server when browser speech recognition is unavailable or fails persistently.',
     settings_label_raw_audio: 'Send raw audio instead of transcribing',
     settings_desc_raw_audio: 'Record and send the original audio file to the agent instead of converting it to text first. The agent can then transcribe it or process the raw audio (emotion, background noise, custom STT). Like Telegram\'s voice message behavior.',
     voice_send_raw: 'Send raw audio',
@@ -2831,6 +2833,8 @@ const LOCALES = {
     // Composer voice-mode pref (#1488)
     settings_label_voice_mode: 'Pulsante modalità vocale a mani libere',
     settings_desc_voice_mode: 'Mostra il pulsante modalità vocale (forma d\'onda audio) accanto al microfono di dettatura. Ti permette di parlare naturalmente — Hermes invia automaticamente dopo una pausa e legge le risposte ad alta voce. Richiede un browser che supporti sia il riconoscimento vocale che la sintesi vocale.',
+    settings_label_voice_mode_server_stt: 'Usa STT server per la modalita vocale',
+    settings_desc_voice_mode_server_stt: 'Trascrivi tramite server quando il riconoscimento vocale del browser non e disponibile o fallisce persistentemente.',
     settings_label_raw_audio: 'Invia l\'audio originale invece di trascriverlo',
     settings_desc_raw_audio: 'Registra e invia il file audio originale all\'agente invece di convertirlo prima in testo. L\'agente può trascriverlo o elaborare l\'audio grezzo (emozioni, rumore di fondo, STT personalizzato). Come il comportamento dei messaggi vocali di Telegram.',
     voice_send_raw: 'Invia audio originale',
@@ -4528,6 +4532,8 @@ const LOCALES = {
     // Composer voice-mode pref (#1488)
     settings_label_voice_mode: 'ハンズフリー音声モードのボタン',
     settings_desc_voice_mode: '音声波形ボタンをディクテーションマイクの隣に表示します。発話の合間に自動送信し、返答を読み上げます。音声認識と TTS の両方をサポートするブラウザが必要です。',
+    settings_label_voice_mode_server_stt: '音声モードでサーバーSTTを使用',
+    settings_desc_voice_mode_server_stt: 'ブラウザの音声認識が利用できない場合や永続的に失敗する場合、サーバー経由で文字起こしします。',
     settings_label_raw_audio: '文字起こしせずに生の音声を送信',
     settings_desc_raw_audio: '音声をテキストに変換せず、元の音声ファイルをそのままエージェントに送信します。エージェントは文字起こしをするか、生の音声を処理（感情分析、背景ノイズ、カスタムSTT）できます。Telegramの音声メッセージと同様の動作です。',
     voice_send_raw: '生の音声を送信',
@@ -6654,6 +6660,8 @@ const LOCALES = {
     // Composer voice-mode pref (#1488)
     settings_label_voice_mode: 'Кнопка режима свободных рук',
     settings_desc_voice_mode: 'Показывать кнопку голосового режима (аудиоволны) рядом с микрофоном диктовки. Hermes автоматически отправляет реплики после паузы и зачитывает ответы вслух. Требуется браузер с поддержкой распознавания речи и TTS.',
+    settings_label_voice_mode_server_stt: 'Использовать серверное STT для голосового режима',
+    settings_desc_voice_mode_server_stt: 'Расшифровка через сервер, когда браузерное распознавание речи недоступно или постоянно ошибается.',
     settings_label_raw_audio: 'Отправлять сырую аудиозапись вместо расшифровки',
     settings_desc_raw_audio: 'Записывать и отправлять агенту исходный аудиофайл вместо преобразования в текст. Агент может расшифровать его или обработать сырое аудио (эмоции, фоновый шум, пользовательский STT). Как голосовые сообщения в Telegram.',
     voice_send_raw: 'Отправить сырое аудио',
@@ -8273,6 +8281,8 @@ const LOCALES = {
     // Composer voice-mode pref (#1488)
     settings_label_voice_mode: 'Botón de modo de voz manos libres',
     settings_desc_voice_mode: 'Show the voice-mode button (audio waveform) next to the dictation mic. Lets you speak naturally — Hermes auto-sends after a pause and reads replies aloud. Requires a browser that supports both speech recognition and TTS.',
+    settings_label_voice_mode_server_stt: 'Usar STT del servidor para modo de voz',
+    settings_desc_voice_mode_server_stt: 'Transcribir a traves del servidor cuando el reconocimiento de voz del navegador no esta disponible o falla persistentemente.',
     settings_label_raw_audio: 'Send raw audio instead of transcribing',
     settings_desc_raw_audio: 'Record and send the original audio file to the agent instead of converting it to text first. The agent can then transcribe it or process the raw audio (emotion, background noise, custom STT). Like Telegram\'s voice message behavior.',
     voice_send_raw: 'Send raw audio',
@@ -9906,6 +9916,8 @@ const LOCALES = {
     // Composer voice-mode pref (#1488)
     settings_label_voice_mode: 'Freihändiger Sprachmodus-Button',
     settings_desc_voice_mode: 'Show the voice-mode button (audio waveform) next to the dictation mic. Lets you speak naturally — Hermes auto-sends after a pause and reads replies aloud. Requires a browser that supports both speech recognition and TTS.',
+    settings_label_voice_mode_server_stt: 'Server-STT fur Sprachmodus verwenden',
+    settings_desc_voice_mode_server_stt: 'Uber den Server transkribieren, wenn die browserbasierte Spracherkennung nicht verfugbar ist oder dauerhaft fehlschlagt.',
     settings_label_raw_audio: 'Send raw audio instead of transcribing',
     settings_desc_raw_audio: 'Record and send the original audio file to the agent instead of converting it to text first. The agent can then transcribe it or process the raw audio (emotion, background noise, custom STT). Like Telegram\'s voice message behavior.',
     voice_send_raw: 'Send raw audio',
@@ -11532,6 +11544,8 @@ const LOCALES = {
     // Composer voice-mode pref (#1488)
     settings_label_voice_mode: '免提语音模式按钮',
     settings_desc_voice_mode: '在听写麦克风旁显示语音模式按钮（音频波形）。让您自然说话 — Hermes 会在停顿后自动发送并朗读回复。需要支持语音识别和 TTS 的浏览器。',
+    settings_label_voice_mode_server_stt: '语音模式使用服务器STT',
+    settings_desc_voice_mode_server_stt: '当浏览器语音识别不可用或持续失败时，通过服务器进行转录。',
     settings_label_raw_audio: '发送原始音频而非转写为文字',
     settings_desc_raw_audio: '录制并将原始音频文件发送给代理，而不是先转换为文本。代理可以转写它或处理原始音频（情绪、背景噪音、自定义语音识别）。类似Telegram的语音消息行为。',
     voice_send_raw: '发送原始音频',
@@ -12750,6 +12764,8 @@ const LOCALES = {
     // Composer voice-mode pref (#1488)
     settings_label_voice_mode: '免持語音模式按鈕',
     settings_desc_voice_mode: '在聽寫麥克風旁顯示語音模式按鈕（音訊波形）。可自然說話，Hermes 會在停頓後自動送出並朗讀回覆。需要同時支援語音辨識與 TTS 的瀏覽器。',
+    settings_label_voice_mode_server_stt: '語音模式使用伺服器STT',
+    settings_desc_voice_mode_server_stt: '當瀏覽器語音辨識不可用或持續失敗時，透過伺服器進行轉寫。',
     settings_label_raw_audio: '傳送原始音訊，而不是先轉寫',
     settings_desc_raw_audio: '錄製並將原始音訊檔傳送給 Agent，而不是先轉成文字。Agent 接著可以轉寫音訊，或處理原始音訊（情緒、背景噪音、自訂 STT）。行為類似 Telegram 語音訊息。',
     voice_send_raw: '傳送原始音訊',
@@ -14736,6 +14752,8 @@ const LOCALES = {
     // Composer voice-mode pref (#1488)
     settings_label_voice_mode: 'Botão de modo de voz mãos livres',
     settings_desc_voice_mode: 'Show the voice-mode button (audio waveform) next to the dictation mic. Lets you speak naturally — Hermes auto-sends after a pause and reads replies aloud. Requires a browser that supports both speech recognition and TTS.',
+    settings_label_voice_mode_server_stt: 'Usar STT do servidor para modo de voz',
+    settings_desc_voice_mode_server_stt: 'Transcrever via servidor quando o reconhecimento de fala do navegador estiver indisponivel ou falhar persistentemente.',
     settings_label_raw_audio: 'Send raw audio instead of transcribing',
     settings_desc_raw_audio: 'Record and send the original audio file to the agent instead of converting it to text first. The agent can then transcribe it or process the raw audio (emotion, background noise, custom STT). Like Telegram\'s voice message behavior.',
     voice_send_raw: 'Send raw audio',
@@ -16426,6 +16444,8 @@ const LOCALES = {
     // Composer voice-mode pref (#1488)
     settings_label_voice_mode: '핸즈프리 음성 모드 버튼',
     settings_desc_voice_mode: 'Show the voice-mode button (audio waveform) next to the dictation mic. Lets you speak naturally — Hermes auto-sends after a pause and reads replies aloud. Requires a browser that supports both speech recognition and TTS.',
+    settings_label_voice_mode_server_stt: '음성 모드에서 서버 STT 사용',
+    settings_desc_voice_mode_server_stt: '브라우저 음성 인식을 사용할 수 없거나 지속적으로 실패할 때 서버를 통해 전사합니다.',
     settings_label_raw_audio: 'Send raw audio instead of transcribing',
     settings_desc_raw_audio: 'Record and send the original audio file to the agent instead of converting it to text first. The agent can then transcribe it or process the raw audio (emotion, background noise, custom STT). Like Telegram\'s voice message behavior.',
     voice_send_raw: 'Send raw audio',
@@ -17629,6 +17649,8 @@ const LOCALES = {
     settings_desc_tts_auto_read: 'Parler automatiquement chaque nouvelle réponse de l\'assistant lorsqu\'elle se termine. S\'arrête lorsque vous commencez à taper.',
     settings_label_voice_mode: 'Bouton de mode vocal mains libres',
     settings_desc_voice_mode: 'Afficher le bouton du mode vocal (forme d\'onde audio) à côté du micro de dictée. Vous permet de parler naturellement — Hermes envoie automatiquement après une pause et lit les réponses à voix haute. Nécessite un navigateur prenant en charge à la fois la reconnaissance vocale et la synthèse vocale.',
+    settings_label_voice_mode_server_stt: 'Utiliser le STT serveur pour le mode vocal',
+    settings_desc_voice_mode_server_stt: 'Transcrire via le serveur lorsque la reconnaissance vocale du navigateur est indisponible ou echoue de maniere persistante.',
     settings_label_raw_audio: 'Envoyer l\'audio brut au lieu de le transcrire',
     settings_desc_raw_audio: 'Enregistrer et envoyer le fichier audio original à l\'agent au lieu de le convertir d\'abord en texte. L\'agent peut ensuite le transcrire ou traiter l\'audio brut (émotion, bruit de fond, STT personnalisé). Comme le comportement des messages vocaux de Telegram.',
     voice_send_raw: 'Envoyer l\'audio brut',
@@ -19104,6 +19126,8 @@ const LOCALES = {
     settings_desc_tts_voice: 'Preferovaný hlas. Naplněno z dostupných hlasů vašeho prohlížeče.',
     settings_desc_virtualize_transcript: 'Experimentální. Vykresluje pouze viditelnou část velmi dlouhých chat transcriptů (přes 80 zpráv) pro urychlení posouvání. Standardně vypnuto protože to může způsobit blikání při posouvání na dlouhých relacích s velkými bloky volání nástrojů. Zapněte to pro vyzkoušení; nechte vypnuté pro vykreslení celého transcriptu najednou (a tak vyhledávání prohlížeče (Ctrl+F) odpovídá celé konverzaci).',
     settings_desc_voice_mode: 'Zobrazit tlačítko hlasového režimu (audio vlna) vedle mikrofonu pro diktování. Umožňuje mluvit přirozeně — Hermes automaticky odesílá po pauze a čte odpovědi nahlas. Vyžaduje prohlížeč který podporuje rozpoznávání řeči i TTS.',
+    settings_label_voice_mode_server_stt: 'Pouzit serverove STT pro hlasovy rezim',
+    settings_desc_voice_mode_server_stt: 'Prepis pres server, kdyz rozpoznavani reci prohlizece neni k dispozici nebo trvale selhava.',
     settings_desc_webhook_sessions: 'Zobrazit webhook běhy jako konverzace v bočním panelu. Aktivní pouze když jsou povoleny externí relace. Standardně vypnuto; vysokoobjemové trasy mohou zaplavit boční panel.',
     settings_desc_whats_new_summary: 'Mění akci Co je nového z otevření raw diff první na generování krátkého lidsky čitelného souhrnu. Regulární srovnání diff zůstává dostupné po souhrnu.',
     settings_desc_worklog_details_expanded_default: 'Když povoleno, detaily Worklog se začínají rozbalené tak aby byly viditelné nástroje, přemýšlení a karty pokroku bez dalšího kliknutí. Když vypnuto, detaily zůstávají sbalené standardně; manuální volby sbalení/rozbalení na úroveň tahu stále vyhrávají.',
@@ -21443,6 +21467,8 @@ const LOCALES = {
     // Composer voice-mode pref (#1488)
     settings_label_voice_mode: 'Eller serbest ses modu düğmesi',
     settings_desc_voice_mode: 'Dikte mikrofonunun yanında ses modu düğmesini gösterir. Duraklamadan sonra Hermes otomatik gönderir ve yanıtları sesli okur. Konuşma tanıma ve TTS destekleyen tarayıcı gerektirir.',
+    settings_label_voice_mode_server_stt: 'Ses modu icin sunucu STT kullan',
+    settings_desc_voice_mode_server_stt: 'Tarayici konusma tanima kullanilamadiginda veya surekli basarisiz oldugunda sunucu uzerinden yaziya dok.',
     settings_label_raw_audio: 'Transkripte etmek yerine ham ses gönder',
     settings_desc_raw_audio: 'Sesi önce metne dönüştürmek yerine orijinal ses dosyasını kaydedip aracıya gönderir. Aracı, dosyayı yazıya dökebilir veya ham sesi (duygu, arka plan gürültüsü, özel STT) işleyebilir. Telegram\'ın sesli mesaj davranışı gibidir.',
     voice_send_raw: 'Ham ses gönder',
@@ -22642,6 +22668,8 @@ const LOCALES = {
     // Composer voice-mode pref (#1488)
     settings_label_voice_mode: 'Przycisk trybu głosowego głośnomówiącego',
     settings_desc_voice_mode: 'Pokaż przycisk trybu głosowego (fala dźwiękowa) obok mikrofonu dyktowania. Pozwala mówić naturalnie — Hermes automatycznie wysyła wiadomość po pauzie i czyta odpowiedzi na głos. Wymaga przeglądarki obsługującej zarówno rozpoznawanie mowy, jak i TTS.',
+    settings_label_voice_mode_server_stt: 'Uzyj serwerowego STT dla trybu glosowego',
+    settings_desc_voice_mode_server_stt: 'Transkrybuj przez serwer, gdy rozpoznawanie mowy w przegladarce jest niedostepne lub trwale zawodzi.',
     settings_label_raw_audio: 'Wyślij surowy dźwięk zamiast transkrypcji',
     settings_desc_raw_audio: 'Nagraj i wyślij oryginalny plik audio do agenta, zamiast najpierw konwertować go na tekst. Agent może go wtedy transkrybować lub przetwarzać surowe audio (emocje, szum tła, własny STT). Podobnie jak wiadomości głosowe w Telegramie.',
     voice_send_raw: 'Wyślij surowe audio',
@@ -24186,6 +24214,8 @@ const LOCALES = {
     // Composer voice-mode pref (#1488)
     settings_label_voice_mode: 'Nút chế độ giọng nói rảnh tay',
     settings_desc_voice_mode: 'Hiển thị nút voice-mode (dạng sóng âm thanh) cạnh microphone đọc chính tả. Cho phép bạn nói tự nhiên — Hermes tự gửi sau khoảng dừng và đọc phản hồi thành tiếng. Yêu cầu trình duyệt hỗ trợ cả nhận diện giọng nói và TTS.',
+    settings_label_voice_mode_server_stt: 'Su dung STT may chu cho che do giong noi',
+    settings_desc_voice_mode_server_stt: 'Phien am qua may chu khi tinh nang nhan dang giong noi cua trinh duyet khong kha dung hoac lien tuc that bai.',
     settings_label_raw_audio: 'Gửi âm thanh gốc thay vì chuyển thành văn bản',
     settings_desc_raw_audio: 'Ghi và gửi file âm thanh gốc tới agent thay vì chuyển thành text trước. Agent sau đó có thể tự chuyển lời nói thành văn bản hoặc xử lý âm thanh gốc (cảm xúc, tiếng nền, STT tùy chỉnh). Tương tự hành vi voice message của Telegram.',
     voice_send_raw: 'Gửi âm thanh gốc',
