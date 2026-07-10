@@ -13,6 +13,7 @@ const ICONS={
   spark:'<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1.8l1.1 3.1 3.1 1.1-3.1 1.1L8 10.2 6.9 7.1 3.8 6l3.1-1.1z"/><path d="M12.5 9.5l.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5z"/></svg>',
   link:'<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6.7 9.3a3 3 0 0 1 0-4.2l1.7-1.7a3 3 0 0 1 4.2 4.2l-1 1"/><path d="M9.3 6.7a3 3 0 0 1 0 4.2l-1.7 1.7a3 3 0 0 1-4.2-4.2l1-1"/></svg>',
   download:'<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 10.5v2.5a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-2.5"/><polyline points="4.5 7 8 10.5 11.5 7"/><line x1="8" y1="10.5" x2="8" y2="2"/></svg>',
+  check:'<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8.5 6.5 12 13 4.5"/></svg>',
 };
 
 // Tracks which session_id is currently being loaded. Used to discard stale
@@ -4207,6 +4208,21 @@ function _openSessionActionMenu(session, anchorEl){
         } else if(typeof showToast==='function'){
           showToast(t('session_rename_failed_no_row')||'Could not start rename — row not found.', 3000, 'error');
         }
+      }
+    ));
+  }
+  // Mark as read — only shown when this session has an unread indicator
+  if(!readOnly && (_hasUnreadForSession(session)||!!session._child_session_has_unread)){
+    menu.appendChild(_buildSessionAction(
+      t('session_mark_read'),
+      t('session_mark_read_desc'),
+      ICONS.check,
+      ()=>{
+        closeSessionActionMenu();
+        const msgCount=Number.isFinite(session.message_count)?session.message_count:0;
+        _setSessionViewedCount(session.session_id, msgCount);
+        renderSessionListFromCache();
+        if(typeof showToast==='function') showToast(t('session_marked_read')||'Marked as read', 2000);
       }
     ));
   }
